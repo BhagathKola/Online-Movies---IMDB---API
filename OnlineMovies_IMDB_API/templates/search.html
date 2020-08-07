@@ -1,0 +1,35 @@
+{% extends 'common.html' %}
+
+{% block common %}
+
+
+    {% include 'mainmenu.html' %}
+
+    <table align="center">
+        <tr>
+            <th>
+                <img src="{{ searchmovie.poster }}" height="250" width="500">
+            </th>
+        </tr>
+        <tr>
+            <h5 align="center">
+                {{ searchmovie.title }}
+            </h5>
+        </tr>
+        <tr>
+            <th>
+                Rating   :   {{ searchmovie.rating }}
+            </th>
+        </tr>
+
+
+    <tr><th>
+        <h5 class="card-title">Official Trailer</h5>
+        <h6 class="card-subtitle mb-3 text-white text-muted ">{{ searchmovie.title }}</h6>
+        <p class="card-text text-justify">{{ searched_movie.plot }}</p>
+        <a href="{{ searchmovie.trailer }}" class="card-link btn btn-warning">Watch trailer Here</a>
+    </th>
+    </tr>
+    </table>
+
+{% endblock %}
