@@ -4,7 +4,7 @@ from OnlineMovies_IMDB_API.settings import MOVIES_API_FILE
 class IMDBapi:
     def __init__(self, get_response):
         self.get_response = get_response
-        t_list=fetchMovie_id()
+        t_list=movieName()
         import requests
         list_of_data=[]
         for title in t_list:
